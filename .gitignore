@@ -1,0 +1,18 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Project Specific (Do NOT commit data or vector stores)
+data/
+chroma_db/
+
+# OS generated files
+.DS_Store
+Thumbs.db
