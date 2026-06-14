@@ -1,7 +1,7 @@
 import argparse
 import sys
 import os
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_community.llms import Ollama
 from langchain_core.prompts import PromptTemplate
@@ -34,7 +34,7 @@ def main():
 
     print(f"Querying local database for: '{args.query}'...\n")
 
-    embeddings = OllamaEmbeddings(model=embedding_model)
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     vector_store = Chroma(persist_directory=chroma_dir, embedding_function=embeddings)
 
     results = vector_store.similarity_search_with_score(args.query, k=4)
