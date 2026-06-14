@@ -3,7 +3,7 @@ import sys
 import shutil
 from langchain_community.document_loaders import PyPDFDirectoryLoader, DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 
 data_dir = "./data"
@@ -47,7 +47,7 @@ def main():
     print(f"Split documents into {len(chunks)} chunks.")
 
     print(f"Initializing Ollama embeddings ({embedding_model}) and ChromaDB...")
-    embeddings = OllamaEmbeddings(model=embedding_model)
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     if os.path.exists(chroma_dir):
         print("Clearing existing vector database...")
