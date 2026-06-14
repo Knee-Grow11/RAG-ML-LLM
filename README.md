@@ -39,6 +39,7 @@ python query.py "What are the main principles of AI Governance according to the 
 **Sample output:**
 
 =================== ANSWER ===================
+
 Based on the provided context, the main principles of AI governance mentioned are:
 
 1. Artificial intelligence (AI) to promote growth, sustainable development, and Israeli leadership in innovation.
