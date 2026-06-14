@@ -3,3 +3,4 @@ langchain-community==0.0.34
 langchain-core==0.1.45
 chromadb==0.4.24
 pypdf==4.2.0
+sentence-transformers
